@@ -8,7 +8,7 @@ help: ## This help.
 
 setup: ## setup for development of this project
 	pip install --progress-bar off -U pip 2>/dev/null
-	pip install --progress-bar off -U setuptools pylint pytest coverage autopep8 'uvicorn[standard]'
+	pip install --progress-bar off -U setuptools pylint pytest coverage autopep8
 	pip install --progress-bar off -U --no-cache-dir -e .
 
 check: ## check metadata
