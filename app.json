@@ -1,0 +1,22 @@
+{
+  "name": "TLS Trust API",
+  "description": "Check the CA Certificate Trust Stores for a website, to verify if the HTTPS connection will work for various systems or devices",
+  "image": "heroku/python",
+  "repository": "https://gitlab.com/trivialsec/tlstrust-api",
+  "keywords": ["ssl", "tls", "trust"],
+  "addons": ["heroku-redis"],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for the Django application.",
+      "generator": "secret"
+    }
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python manage.py collectstatic --noinput",
+        "test": "pytest"
+      }
+    }
+  }
+}
