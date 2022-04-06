@@ -43,10 +43,10 @@ async def query_host(host: str = Path(
         title="Port number",
         ge=1,
         le=49151
-    ), use_sni: Optional[bool] = Query(
+), use_sni: Optional[bool] = Query(
         True,
         title="Control if SNI is utilised",
-    )):
+)):
     if validators.domain(host) is not True:
         return JSONResponse(status_code=422, content={"detail": {"msg": "provided an invalid domain"}})
     query = check(host, port, use_sni=use_sni)
