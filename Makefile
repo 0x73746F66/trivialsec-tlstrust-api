@@ -6,6 +6,9 @@ help: ## This help.
 
 .DEFAULT_GOAL := help
 
+run-local: ## start a hot reload local server on port 8088
+	uvicorn src.main --workers 4 --host=0.0.0.0 --port=8088 --reload
+
 setup: ## setup for development of this project
 	pip install --progress-bar off -U pip 2>/dev/null
 	pip install --progress-bar off -U setuptools pylint pytest coverage autopep8
@@ -17,6 +20,9 @@ check: ## check metadata
 test: check ## run unit tests with coverage
 	coverage run -m pytest --nf -s
 	coverage report -m
+
+deploy: ## push to heroku
+	git push heroku main
 
 publish: check ## upload to pypi.org
 	git tag -f $(shell cat ./setup.py | grep 'version=' | sed 's/[version=", ]//g')
