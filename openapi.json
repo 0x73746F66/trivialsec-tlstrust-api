@@ -1,0 +1,177 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "SSL/TLS Trust Verifier",
+        "version": "0.0.2"
+    },
+    "servers": [
+        {
+            "url": "https://tlstrust-api.herokuapp.com"
+        }
+    ],
+    "paths": {
+        "/{host}": {
+            "get": {
+                "summary": "Query Host",
+                "operationId": "query_host",
+                "parameters": [
+                    {
+                        "description": "target domain name for the TLS Certificate to verify it's device and platform trust stores",
+                        "required": true,
+                        "schema": {
+                            "title": "Domain Name",
+                            "type": "string",
+                            "description": "target domain name for the TLS Certificate to verify it's device and platform trust stores"
+                        },
+                        "name": "host",
+                        "in": "path"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Port number",
+                            "maximum": 49151.0,
+                            "minimum": 1.0,
+                            "type": "integer",
+                            "default": 443
+                        },
+                        "name": "port",
+                        "in": "query"
+                    },
+                    {
+                        "required": false,
+                        "schema": {
+                            "title": "Control if SNI is utilised",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "name": "use_sni",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully retrieved information of the domain",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "example": {
+                                    "fetch_time": "2022-04-06T15:22:21",
+                                    "host": "ssllabs.com",
+                                    "port": 443,
+                                    "peer_address": "64.41.200.100",
+                                    "not_valid_after": "2031-04-13T23:59:59",
+                                    "certificate_issuer": "DigiCert Global Root CA",
+                                    "issuer_ski": "03de503556d14cbb66f0a3e21b1bc397b23dd155",
+                                    "is_trusted": true,
+                                    "results": {
+                                        "Common Certificate Authority Database (CCADB)": true,
+                                        "Java(TM) SE Runtime Environment": true,
+                                        "Google Trust Services": true,
+                                        "Linux (Arch)": true,
+                                        "Certifi (Python module for Certificate Authority Certificates)": true,
+                                        "MinTsifry Rossii": true,
+                                        "Python 3.10": true,
+                                        "Microsoft Windows": true,
+                                        "Apple Devices": true,
+                                        "Android": true,
+                                        "latest Android build": true,
+                                        "Android 2.2 (Froyo) 2010": true,
+                                        "Android 2.3 (Gingerbread) 2010": true,
+                                        "Android 3 (Honeycomb) 2011": true,
+                                        "Android 4 (Ice Cream Sandwich) 2011": true,
+                                        "Android 4.4 (KitKat) 2013": true,
+                                        "Android 7 (Nougat) 2016": true,
+                                        "Android 8 (Oreo) 2017": true,
+                                        "Android 9 (Pie) 2018": true,
+                                        "Android 10 (Q) 2019": true,
+                                        "Android 11 2020": true,
+                                        "Android 12 2021": true,
+                                        "Mozilla Firefox": true,
+                                        "Tor Web Browser": true,
+                                        "Chromium Browser": true,
+                                        "Google Chrome": true,
+                                        "Microsoft Edge": true,
+                                        "Brave Browser": true,
+                                        "Opera Browser": true,
+                                        "Vivaldi Browser": true,
+                                        "Amazon Silk": true,
+                                        "Samsung Internet": true,
+                                        "Yandex": true,
+                                        "Apple Safari": true,
+                                        "Python built-in https module on Windows": true,
+                                        "Python built-in https module on Linux": true,
+                                        "Python built-in https module on Apple": true,
+                                        "certifi (Python module)": true,
+                                        "urllib (Python module)": true,
+                                        "requests (Python module)": true,
+                                        "Django (Python module)": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Insufficient privileges for this action"
+                    },
+                    "404": {
+                        "description": "No response for this domain name"
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "HTTPValidationError": {
+                "title": "HTTPValidationError",
+                "type": "object",
+                "properties": {
+                    "detail": {
+                        "title": "Detail",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        }
+                    }
+                }
+            },
+            "ValidationError": {
+                "title": "ValidationError",
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "type": "object",
+                "properties": {
+                    "loc": {
+                        "title": "Location",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "msg": {
+                        "title": "Message",
+                        "type": "string"
+                    },
+                    "type": {
+                        "title": "Error Type",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
