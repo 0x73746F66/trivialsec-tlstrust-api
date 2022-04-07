@@ -7,9 +7,6 @@
     "servers": [
         {
             "url": "https://tlstrust-api.herokuapp.com"
-        },
-        {
-            "url": "http://jager:8088"
         }
     ],
     "paths": {
@@ -51,18 +48,6 @@
                         },
                         "name": "use_sni",
                         "in": "query"
-                    },
-                    {
-                        "description": "The secret key for blocking requests coming from outside the RapidAPI infrastructure",
-                        "required": false,
-                        "schema": {
-                            "title": "X-Rapidapi-Proxy-Secret",
-                            "type": "string",
-                            "description": "The secret key for blocking requests coming from outside the RapidAPI infrastructure",
-                            "default": "letmein"
-                        },
-                        "name": "x-rapidapi-proxy-secret",
-                        "in": "header"
                     }
                 ],
                 "responses": {
@@ -73,7 +58,7 @@
                                 "schema": {},
                                 "example": {
                                     "_metadata": {
-                                        "fetch_time": "2022-04-07T06:02:05",
+                                        "fetch_time": "2022-04-07T13:02:16",
                                         "certificate_not_valid_after": "2031-04-13T23:59:59",
                                         "certificate_issuer": "DigiCert Global Root CA",
                                         "certificate_issuer_ski": "03de503556d14cbb66f0a3e21b1bc397b23dd155"
@@ -87,167 +72,247 @@
                                     "trust_stores": [
                                         {
                                             "name": "Common Certificate Authority Database (CCADB)",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Java(TM) SE Runtime Environment",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Google Trust Services",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Linux (Arch)",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Certifi (Python module for Certificate Authority Certificates)",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "MinTsifry Rossii",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": false
                                         },
                                         {
                                             "name": "Python 3.10",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Microsoft Windows",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Apple Devices",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "latest Android build",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 2.2 (Froyo) 2010",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 2.3 (Gingerbread) 2010",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 3 (Honeycomb) 2011",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 4 (Ice Cream Sandwich) 2011",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 4.4 (KitKat) 2013",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 7 (Nougat) 2016",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 8 (Oreo) 2017",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 9 (Pie) 2018",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 10 (Q) 2019",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 11 2020",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Android 12 2021",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Mozilla Firefox",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Tor Web Browser",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Chromium Browser",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Google Chrome",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Microsoft Edge",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Brave Browser",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Opera Browser",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Vivaldi Browser",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Amazon Silk",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Samsung Internet",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Yandex",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": false
                                         },
                                         {
                                             "name": "Apple Safari",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Python built-in https module on Windows",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Python built-in https module on Linux",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Python built-in https module on Apple",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "certifi (Python module)",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "urllib (Python module)",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "requests (Python module)",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         },
                                         {
                                             "name": "Django (Python module)",
-                                            "is_trusted": true
+                                            "is_trusted": true,
+                                            "exists": true,
+                                            "expired": false
                                         }
                                     ]
                                 }
