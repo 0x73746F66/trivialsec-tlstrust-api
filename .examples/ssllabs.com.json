@@ -1,0 +1,180 @@
+{
+    "_metadata": {
+        "fetch_time": "2022-04-07T00:22:30",
+        "certificate_not_valid_after": "2031-04-13T23:59:59",
+        "certificate_issuer": "DigiCert Global Root CA",
+        "certificate_issuer_ski": "03de503556d14cbb66f0a3e21b1bc397b23dd155"
+    },
+    "_query": {
+        "host": "ssllabs.com",
+        "port": 443,
+        "use_sni": true,
+        "peer_address": "64.41.200.100"
+    },
+    "trust_stores": [
+        {
+            "name": "Common Certificate Authority Database (CCADB)",
+            "is_trusted": true
+        },
+        {
+            "name": "Java(TM) SE Runtime Environment",
+            "is_trusted": true
+        },
+        {
+            "name": "Google Trust Services",
+            "is_trusted": true
+        },
+        {
+            "name": "Linux (Arch)",
+            "is_trusted": true
+        },
+        {
+            "name": "Certifi (Python module for Certificate Authority Certificates)",
+            "is_trusted": true
+        },
+        {
+            "name": "MinTsifry Rossii",
+            "is_trusted": true
+        },
+        {
+            "name": "Python 3.10",
+            "is_trusted": true
+        },
+        {
+            "name": "Microsoft Windows",
+            "is_trusted": true
+        },
+        {
+            "name": "Apple Devices",
+            "is_trusted": true
+        },
+        {
+            "name": "Android",
+            "is_trusted": true
+        },
+        {
+            "name": "latest Android build",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 2.2 (Froyo) 2010",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 2.3 (Gingerbread) 2010",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 3 (Honeycomb) 2011",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 4 (Ice Cream Sandwich) 2011",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 4.4 (KitKat) 2013",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 7 (Nougat) 2016",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 8 (Oreo) 2017",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 9 (Pie) 2018",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 10 (Q) 2019",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 11 2020",
+            "is_trusted": true
+        },
+        {
+            "name": "Android 12 2021",
+            "is_trusted": true
+        },
+        {
+            "name": "Mozilla Firefox",
+            "is_trusted": true
+        },
+        {
+            "name": "Tor Web Browser",
+            "is_trusted": true
+        },
+        {
+            "name": "Chromium Browser",
+            "is_trusted": true
+        },
+        {
+            "name": "Google Chrome",
+            "is_trusted": true
+        },
+        {
+            "name": "Microsoft Edge",
+            "is_trusted": true
+        },
+        {
+            "name": "Brave Browser",
+            "is_trusted": true
+        },
+        {
+            "name": "Opera Browser",
+            "is_trusted": true
+        },
+        {
+            "name": "Vivaldi Browser",
+            "is_trusted": true
+        },
+        {
+            "name": "Amazon Silk",
+            "is_trusted": true
+        },
+        {
+            "name": "Samsung Internet",
+            "is_trusted": true
+        },
+        {
+            "name": "Yandex",
+            "is_trusted": true
+        },
+        {
+            "name": "Apple Safari",
+            "is_trusted": true
+        },
+        {
+            "name": "Python built-in https module on Windows",
+            "is_trusted": true
+        },
+        {
+            "name": "Python built-in https module on Linux",
+            "is_trusted": true
+        },
+        {
+            "name": "Python built-in https module on Apple",
+            "is_trusted": true
+        },
+        {
+            "name": "certifi (Python module)",
+            "is_trusted": true
+        },
+        {
+            "name": "urllib (Python module)",
+            "is_trusted": true
+        },
+        {
+            "name": "requests (Python module)",
+            "is_trusted": true
+        },
+        {
+            "name": "Django (Python module)",
+            "is_trusted": true
+        }
+    ]
+}
