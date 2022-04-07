@@ -62,6 +62,7 @@ async def query_host(
         None if getenv('APP_ENV') != 'development' else 'letmein',
         title='X-Rapidapi-Proxy-Secret',
         description='The secret key for blocking requests coming from outside the RapidAPI infrastructure',
+        include_in_schema=getenv('APP_ENV') == 'development'
     )):
     if validators.domain(host) is not True:
         return JSONResponse(status_code=422, content={"detail": {"msg": "provided an invalid domain"}})
