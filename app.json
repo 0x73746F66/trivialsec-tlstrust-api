@@ -3,12 +3,16 @@
   "description": "Check the CA Certificate Trust Stores for a website, to verify if the HTTPS connection will work for various systems or devices",
   "image": "heroku/python",
   "repository": "https://gitlab.com/trivialsec/tlstrust-api",
-  "keywords": ["ssl", "tls", "trust"],
-  "addons": ["heroku-redis"],
+  "keywords": ["ssl", "tls", "https", "trust", "test", "validation", "verify"],
   "env": {
-    "SECRET_KEY": {
-      "description": "The secret key for the Django application.",
-      "generator": "secret"
+    "RAPIDAPI_SECRET": {
+      "description": "The secret key for blocking requests coming from outside the RapidAPI infrastructure.",
+      "required": true
+    },
+    "APP_ENV": {
+      "description": "The application context environemnt configurations.",
+      "required": true,
+      "value": "production"
     }
   },
   "environments": {
