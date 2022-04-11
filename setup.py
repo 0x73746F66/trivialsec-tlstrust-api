@@ -24,7 +24,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'fastapi==0.75.1',
-        'tlstrust==2.4.0',
+        'tlstrust==2.4.1',
         'validators==0.18.2',
         'uvicorn[standard]'
     ],
