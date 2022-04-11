@@ -8,7 +8,7 @@ from tlstrust import TrustStore, trust_stores_from_chain
 from tlstrust.util import get_certificate_chain
 import output
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 hostname = socket.gethostname()
 errors = {
     403: {

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="tlstrust-api",
-    version="0.0.2",
+    version="0.0.3",
     author='Christopher Langton',
     author_email='chris@trivialsec.com',
     description="Utilities that assist with trust relationship checking of X.509 Certificates for various end-user devices with disparate root trust stores.",
@@ -24,7 +24,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'fastapi==0.75.1',
-        'tlstrust==2.3.0',
+        'tlstrust==2.4.0',
         'validators==0.18.2',
         'uvicorn[standard]'
     ],
