@@ -6,7 +6,7 @@ from fastapi import FastAPI, Path, Query, Header
 from fastapi.responses import JSONResponse
 from tlstrust import trust_stores_from_chain
 from tlstrust.util import get_certificate_chain
-import output
+import outputSOURCE_RUSSIASOURCE_RUSSIA
 
 __version__ = "0.0.3"
 hostname = socket.gethostname()
