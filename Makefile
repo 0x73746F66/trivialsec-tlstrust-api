@@ -13,9 +13,9 @@ run-local: ## start a hot reload local server on port 8088
 	uvicorn main:app --workers 4 --host=0.0.0.0 --port=8088 --reload
 
 setup: ## setup for development of this project
-	pip install --progress-bar off -U pip 2>/dev/null
-	pip install --progress-bar off -U setuptools pylint pytest coverage autopep8
-	pip install --progress-bar off -U --no-cache-dir -e .
+	pip install -U pip
+	pip install -U setuptools pylint pytest coverage autopep8
+	pip install -U -e .
 
 check: ## check metadata
 	python3 setup.py check -ms
