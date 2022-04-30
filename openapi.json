@@ -2,7 +2,7 @@
     "openapi": "3.0.2",
     "info": {
         "title": "SSL/TLS Trust Verifier",
-        "version": "0.0.3"
+        "version": "0.0.5"
     },
     "servers": [
         {
