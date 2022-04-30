@@ -4,9 +4,8 @@ from typing import Optional
 import validators
 from fastapi import FastAPI, Path, Query, Header
 from fastapi.responses import JSONResponse
-from tlstrust import trust_stores_from_chain
+from tlstrust import TrustStore, trust_stores_from_chain
 from tlstrust.util import get_certificate_chain
-import output
 
 __version__ = "0.0.4"
 hostname = socket.gethostname()
@@ -23,6 +22,12 @@ servers = [
 ]
 if getenv('APP_ENV') == 'development':
     servers.append({'url': "http://jager:8088"})
+
+def to_json(trust_store: TrustStore, **kwargs) -> dict:
+    result = trust_store.to_dict()
+    result['_query'] = {**kwargs}
+    return result
+
 
 app = FastAPI(
     title='SSL/TLS Trust Verifier',
@@ -72,5 +77,5 @@ async def query_host(
     chain, peer_addr = get_certificate_chain(host, port, use_sni=use_sni)
     results = []
     for store in trust_stores_from_chain(chain):
-        results.append(output.to_json(store, peer_addr=peer_addr, host=host, port=port, use_sni=use_sni))
+        results.append(to_json(store, peer_addr=peer_addr, host=host, port=port, use_sni=use_sni))
     return results
