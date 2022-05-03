@@ -7,7 +7,7 @@ from fastapi.responses import JSONResponse
 from tlstrust import TrustStore, trust_stores_from_chain
 from tlstrust.util import get_certificate_chain
 
-__version__ = "0.0.6"
+__version__ = "0.0.7"
 hostname = socket.gethostname()
 errors = {
     403: {
