@@ -12,9 +12,10 @@ help: ## This help.
 run-local: ## start a hot reload local server on port 8088
 	uvicorn main:app --workers 4 --host=0.0.0.0 --port=8088 --reload
 
-setup: ## setup for development of this project
-	pip install -U pip
-	pip install -U setuptools pylint pytest coverage autopep8
+deps: ## setup for development of this project
+	pip install -U -e .
+
+setup: deps ## setup for development of this project
 	pip install -U -e .
 
 check: ## check metadata
